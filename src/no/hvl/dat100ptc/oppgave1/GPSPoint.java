@@ -1,10 +1,10 @@
 package no.hvl.dat100ptc.oppgave1;
 
 public class GPSPoint {
-	int time;
-	double latitude;
-	double longitude;
-	double elevation;
+	private int time;
+	private double latitude;
+	private double longitude;
+	private double elevation;
 	
 	public GPSPoint(int time, double latitude, double longitude, double elevation) {
 		this.time = time;
@@ -47,11 +47,15 @@ public class GPSPoint {
 	
 	@Override public String toString() {
 		
-		String str;
+		String str = "";
+
+		//opggave 1c format
+		str += time + " ";
+		str += "("+this.latitude+","+this.longitude+") ";
+		str += this.elevation+"\n";
 
 		//csv format
-		str = this.time + "," + this.latitude+ "," + this.longitude + "," + this.elevation;
-		
+		//str = this.time + "," + this.latitude+ "," + this.longitude + "," + this.elevation;
 		return str;
 
 		// TODO andre format?
