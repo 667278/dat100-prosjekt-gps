@@ -1,9 +1,6 @@
 package no.hvl.dat100ptc.oppgave1;
 
-import no.hvl.dat100ptc.TODO;
-
 public class GPSPoint {
-
 	private int time;
 	private double latitude;
 	private double longitude;
@@ -45,7 +42,21 @@ public class GPSPoint {
 	public void setElevation(double elevation) {
 		this.elevation = elevation;
 	}
-	public String toString() {
-		return ""+time+" ("+latitude+","+longitude+") "+elevation;
+	
+	@Override public String toString() {
+		
+		String str = "";
+
+		//opggave 1c format
+		str += time + " ";
+		str += "("+this.latitude+","+this.longitude+") ";
+		str += this.elevation+"\n";
+
+		//csv format
+		//str = this.time + "," + this.latitude+ "," + this.longitude + "," + this.elevation;
+		return str;
+
+		// TODO andre format?
+		
 	}
 }
